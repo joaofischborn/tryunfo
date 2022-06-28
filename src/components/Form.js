@@ -18,13 +18,12 @@ class Form extends React.Component {
     return (
       <form>
         <div>
-          <label htmlFor="name">
+          <label htmlFor="cardName">
             Card Name:
             <input
               data-testid="name-input"
               type="text"
-              id="name"
-              name="name"
+              name="cardName"
               value={ cardName }
               onChange={ onInputChange }
             />
@@ -32,13 +31,12 @@ class Form extends React.Component {
         </div>
 
         <div>
-          <label htmlFor="description">
+          <label htmlFor="cardDescription">
             Description:
             <input
               type="textarea"
               data-testid="description-input"
-              id="description"
-              name="desc"
+              name="cardDescription"
               onChange={ onInputChange }
               value={ cardDescription }
             />
@@ -46,13 +44,14 @@ class Form extends React.Component {
         </div>
 
         <div>
-          <label htmlFor="number1">
+          <label htmlFor="cardAttr1">
             Number:
             <input
               data-testid="attr1-input"
               type="number"
-              id="number1"
-              name="attr1"
+              name="cardAttr1"
+              min="0"
+              max="90"
               value={ cardAttr1 }
               onChange={ onInputChange }
             />
@@ -60,13 +59,14 @@ class Form extends React.Component {
         </div>
 
         <div>
-          <label htmlFor="number2">
+          <label htmlFor="cardAttr2">
             Number:
             <input
               data-testid="attr2-input"
               type="number"
-              id="number2"
-              name="attr2"
+              name="cardAttr2"
+              min="0"
+              max="90"
               value={ cardAttr2 }
               onChange={ onInputChange }
             />
@@ -74,13 +74,14 @@ class Form extends React.Component {
         </div>
 
         <div>
-          <label htmlFor="number3">
+          <label htmlFor="cardAttr3">
             Number:
             <input
               data-testid="attr3-input"
               type="number"
-              id="number3"
-              name="attr3"
+              name="cardAttr3"
+              min="0"
+              max="90"
               value={ cardAttr3 }
               onChange={ onInputChange }
             />
@@ -88,13 +89,12 @@ class Form extends React.Component {
         </div>
 
         <div>
-          <label htmlFor="image">
+          <label htmlFor="cardImage">
             Image URL:
             <input
               data-testid="image-input"
               type="text"
-              id="image"
-              name="thumbnail"
+              name="cardImage"
               value={ cardImage }
               onChange={ onInputChange }
             />
@@ -102,14 +102,13 @@ class Form extends React.Component {
         </div>
 
         <div>
-          <label htmlFor="select">
+          <label htmlFor="cardRare">
             Select class:
             <select
               data-testid="rare-input"
+              name="cardRare"
               value={ cardRare }
               onChange={ onInputChange }
-              id="select"
-              name="classCard"
             >
               <option>normal</option>
               <option>raro</option>
@@ -122,10 +121,9 @@ class Form extends React.Component {
           <label htmlFor="check">
             Super Trunfo
             <input
-              data-testid="trunfo-input"
+              data-testid="cardTrunfo"
               type="checkbox"
-              id="check"
-              name="superTrunfo"
+              name="cardTrunfo"
               checked={ cardTrunfo }
               onChange={ onInputChange }
             />
@@ -136,6 +134,7 @@ class Form extends React.Component {
           <button
             data-testid="save-button"
             type="submit"
+            name="isSaveButtonDisabled"
             disabled={ isSaveButtonDisabled }
             onClick={ onSaveButtonClick }
           >
