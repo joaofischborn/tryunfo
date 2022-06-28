@@ -121,7 +121,7 @@ class Form extends React.Component {
           <label htmlFor="check">
             Super Trunfo
             <input
-              data-testid="cardTrunfo"
+              data-testid="trunfo-input"
               type="checkbox"
               name="cardTrunfo"
               checked={ cardTrunfo }
